@@ -1,38 +1,62 @@
 /* Initial body */
+* {
+    box-sizing: border-box;
+}
 
 body {
     left: 0;
     margin: 0;
-    overflow: hidden;
     position: relative;
+    height: 100%;
     /*background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://lsu.edu/_resources/images/visit3.jpeg');
-    background-color: rgba(0,0,0, 0.5); /* Black w/opacity */*/
+    background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+    */
 }
 
 
 /* Initial menu */
+
 .menu {
-    background-color: rgba(34, 51, 59, 0.9); /* Black w/opacity */
-    left: -285px;  /* start off behind the scenes */
+    background-color: rgba(34, 51, 59, 0.9);
+    /* Black w/opacity */
+    left: -285px;
+    /* start off behind the scenes */
     height: 100%;
     position: fixed;
     width: 285px;
     z-index: 5;
 }
 
+
 /* Basic styling */
-.bg-image {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://lsu.edu/_resources/images/visit3.jpeg');
-    background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+
+.bg-image1, .bg-image2 {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    display: block;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    height: 100%;
     left: 0;
-    position: fixed;
     right: 0;
-    z-index: 1;
+    position: relative;
+}
+
+.bg-image1 {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://lsu.edu/_resources/images/visit3.jpeg');
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/opacity */
+    display: block;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    height: 100%;
+}
+
+.bg-image2 {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://lsu.edu/_resources/images/visit3.jpeg');
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/opacity */
+    display: block;
+    height: 300px;
 }
 
 .menu ul {
@@ -58,28 +82,49 @@ body {
     text-transform: uppercase;
 }
 
+.name-label {
+    display: inline-block;
+    color: #d8dbe2;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 48px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-top: 10px;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    text-decoration: none;
+    z-index: 2;
+}
 
 .icon-menu {
     display: inline-block;
-    color: #fff;
+    color: #d8dbe2;
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 16px;
     padding-bottom: 25px;
     padding-left: 25px;
     padding-top: 25px;
-    position: fixed;
+    position: absolute;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .2s ease-in-out;
-    z-index: 2;
-
+    z-index: 3;
 }
 
-.icon-menu:hover{
+.icon-menu:hover {
     transform: scale(1.1);
 }
 
 .icon-menu i {
     margin-right: 5px;
+}
+
+.item1 {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
 }
